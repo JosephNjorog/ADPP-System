@@ -1,6 +1,4 @@
-Certainly! I'll create a detailed README.md file for your backend project. Here's a comprehensive README that covers all aspects of your AI-Powered Disease Outbreak Prediction and Prevention System backend:
 
-```markdown
 # AI-Powered Disease Outbreak Prediction and Prevention System Backend
 
 ## Table of Contents
