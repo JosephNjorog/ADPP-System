@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>Welcome, {user.username}!</h1>
+      <h1>Holla! Welcome, {user.username}!</h1>
       <div className="dashboard-grid">
         <div className="dashboard-item">
           <h2>Recent Data</h2>
