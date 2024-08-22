@@ -15,5 +15,13 @@ const deleteAlert = async (alertId) => {
   return response.data;
 };
 
+// Assign object to a variable
+const alertService = {
+  getAlerts,
+  createAlert,
+  deleteAlert
+};
+
+// Export the object and individual functions
 export { getAlerts, createAlert, deleteAlert };
-export default { getAlerts, createAlert, deleteAlert };
+export default alertService;

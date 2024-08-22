@@ -5,29 +5,56 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const unsubscribe = authService.onAuthStateChanged(user => {
       setCurrentUser(user);
+      setLoading(false);
     });
 
-    return unsubscribe;
+    return () => unsubscribe();
   }, []);
 
   const login = async (email, password) => {
-    await authService.login(email, password);
+    setLoading(true);
+    setError(null);
+    try {
+      await authService.login(email, password);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const signup = async (email, password) => {
-    await authService.signup(email, password);
+    setLoading(true);
+    setError(null);
+    try {
+      await authService.signup(email, password);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const logout = async () => {
-    await authService.logout();
+    setLoading(true);
+    setError(null);
+    try {
+      await authService.logout();
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <AuthContext.Provider value={{ currentUser, login, signup, logout }}>
+    <AuthContext.Provider value={{ currentUser, login, signup, logout, loading, error }}>
       {children}
     </AuthContext.Provider>
   );

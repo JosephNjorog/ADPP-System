@@ -10,5 +10,12 @@ const createPrediction = async (predictionData) => {
   return response.data;
 };
 
+// Assign object to a variable
+const predictionService = {
+  getPredictions,
+  createPrediction
+};
+
+// Export the object and individual functions
 export { getPredictions, createPrediction };
-export default { getPredictions, createPrediction };
+export default predictionService;

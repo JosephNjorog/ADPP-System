@@ -14,5 +14,13 @@ const logout = () => {
   localStorage.removeItem('token');
 };
 
+// Assign object to a variable
+const authService = {
+  login,
+  register,
+  logout
+};
+
+// Export the object and individual functions
 export { login, register, logout };
-export default { login, register, logout };
+export default authService;
