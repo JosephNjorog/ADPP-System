@@ -1,0 +1,22 @@
+{
+    "canisters": {
+      "alert_system": {
+        "type": "motoko",
+        "main": "backend/src/canisters/alert_system.mo"
+      },
+      "data_preprocessing": {
+        "type": "motoko",
+        "main": "backend/src/canisters/data_preprocessing.mo"
+      },
+      "prediction_engine": {
+        "type": "motoko",
+        "main": "backend/src/canisters/prediction_engine.mo"
+      }
+    },
+    "defaults": {
+      "build": {
+        "rustc_flags": []
+      }
+    }
+  }
+  
