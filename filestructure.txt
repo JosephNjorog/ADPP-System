@@ -28,11 +28,9 @@
                 |-- bd3sg-teaaa-aaaaa-qaaba-cai.did
                 |-- bkyz2-fmaaa-aaaaa-qaaaq-cai.did
             |-- network-id
-    |-- .env
     |-- .gitignore
     |-- README.md
     |-- dfx.json
-    |-- package-lock.json
     |-- package.json
     |-- src
         |-- ADPP_backend_backend
