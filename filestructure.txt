@@ -1,8 +1,3 @@
-|-- .dfx
-    |-- local
-        |-- canisters
-        |-- network-id
-|-- .gitignore
 |-- ADPP_system
     |-- .dfx
         |-- local
@@ -166,6 +161,3 @@
                 |-- index.js
     |-- tsconfig.json
 |-- README.md
-|-- dfx.json
-|-- package-lock.json
-|-- package.json
